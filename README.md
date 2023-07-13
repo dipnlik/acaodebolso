@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# acaodebolso-react
+
+A simple card randomizer.
+
+Requires a `src/cards.json` file.
+
+---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

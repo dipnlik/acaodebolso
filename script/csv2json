@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require 'csv'
+require 'json'
+
+file1 = CSV.read('1.csv', headers: true)
+file2 = CSV.read('2.csv', headers: true)
+
+full_list = file1.map(&:to_h) + file2.map(&:to_h)
+
+File.write('cards.json', full_list.to_json)

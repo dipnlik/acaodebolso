@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# private files
+script/*.csv
+script/*.json
+src/cards.json
