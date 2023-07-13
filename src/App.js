@@ -1,48 +1,59 @@
 import './App.css';
+import cards from "./cards.json";
+
+Array.prototype.random = function () {
+  return this[Math.floor((Math.random() * this.length))];
+}
+
+const Card = ({ contents }) => {
+  return (
+    <table className="table table-striped">
+      <tbody>
+        <tr>
+          <td className="category">P</td>
+          <td className="text">{contents.P}</td>
+          <td className="score">{contents.vP}</td>
+        </tr>
+        <tr>
+          <td className="category">O</td>
+          <td className="text">{contents.O}</td>
+          <td className="score">{contents.vO}</td>
+        </tr>
+        <tr>
+          <td className="category">A</td>
+          <td className="text">{contents.A}</td>
+          <td className="score">{contents.vA}</td>
+        </tr>
+        <tr>
+          <td className="category">D</td>
+          <td className="text">{contents.D}</td>
+          <td className="score">{contents.vD}</td>
+        </tr>
+        <tr>
+          <td className="category">L</td>
+          <td className="text">{contents.L}</td>
+          <td className="score">{contents.vL}</td>
+        </tr>
+        <tr>
+          <td className="category">M</td>
+          <td className="text">{contents.M}</td>
+          <td className="score">{contents.vM}</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td className="card-info" colSpan="3">#{contents.id}-{contents.gid}</td>
+        </tr>
+      </tfoot>
+    </table>
+  )
+}
 
 function App() {
   return (
     <div className="App">
-        <h1>Ação de Bolso</h1>
-        <table class="table table-striped">
-            <tbody>
-                <tr>
-                    <td class="category">P</td>
-                    <td class="text">enxame de abelhas</td>
-                    <td class="score">2</td>
-                </tr>
-                <tr>
-                    <td class="category">O</td>
-                    <td class="text">porta-malas</td>
-                    <td class="score">4</td>
-                </tr>
-                <tr>
-                    <td class="category">A</td>
-                    <td class="text">marcar</td>
-                    <td class="score">3</td>
-                </tr>
-                <tr>
-                    <td class="category">D</td>
-                    <td class="text">ocioso</td>
-                    <td class="score">5</td>
-                </tr>
-                <tr>
-                    <td class="category">L</td>
-                    <td class="text">Olga</td>
-                    <td class="score">1</td>
-                </tr>
-                <tr>
-                    <td class="category">M</td>
-                    <td class="text">guaraná</td>
-                    <td class="score">6</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td class="card-info" colspan="3">#385-2</td>
-                </tr>
-            </tfoot>
-        </table>
+      <h1>Ação de Bolso</h1>
+      <Card contents={cards.random()} />
     </div>
   );
 }
