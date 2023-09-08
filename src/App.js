@@ -14,12 +14,24 @@ function App() {
     setCurrentCard(sampleFrom(cards));
   }
 
+  const handleShare = () => {
+    if (!navigator.canShare) return;
+
+    navigator.share({
+      title: 'Ação de Bolso',
+      url: 'https://dipnlik.github.io/acaodebolso/',
+    });
+  }
+
   return (
     <div className="App">
       <h1>Ação de Bolso</h1>
       <Card contents={currentCard} />
       <p>
         <button onClick={onRefresh}>🔀</button>
+        {navigator.share && (
+          <button onClick={handleShare}>↗️</button>
+        )}
       </p>
       <p>
         Gostou do app? Não esqueça que ele é só uma conveniência.
