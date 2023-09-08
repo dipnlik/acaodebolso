@@ -11,3 +11,4 @@ Usage: see the scripts in `package.json`.
 - [x] add refresh button for iOS
 - [ ] improve preview (like in Telegram)
 - [x] add incentive message to buy the game
+- [ ] custom icon
