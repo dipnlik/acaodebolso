@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/acaodebolso/static/css/main.e43a1886.css",
-    "main.js": "/acaodebolso/static/js/main.194e9298.js",
+    "main.css": "/acaodebolso/static/css/main.2d867d72.css",
+    "main.js": "/acaodebolso/static/js/main.477eeff4.js",
     "static/js/787.e3103d81.chunk.js": "/acaodebolso/static/js/787.e3103d81.chunk.js",
     "index.html": "/acaodebolso/index.html",
-    "main.e43a1886.css.map": "/acaodebolso/static/css/main.e43a1886.css.map",
-    "main.194e9298.js.map": "/acaodebolso/static/js/main.194e9298.js.map",
+    "main.2d867d72.css.map": "/acaodebolso/static/css/main.2d867d72.css.map",
+    "main.477eeff4.js.map": "/acaodebolso/static/js/main.477eeff4.js.map",
     "787.e3103d81.chunk.js.map": "/acaodebolso/static/js/787.e3103d81.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e43a1886.css",
-    "static/js/main.194e9298.js"
+    "static/css/main.2d867d72.css",
+    "static/js/main.477eeff4.js"
   ]
 }
