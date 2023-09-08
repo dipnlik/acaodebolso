@@ -10,4 +10,4 @@ Usage: see the scripts in `package.json`.
 
 - [x] add refresh button for iOS
 - [ ] improve preview (like in Telegram)
-- [ ] add message to motivate people to buy the game
+- [x] add incentive message to buy the game

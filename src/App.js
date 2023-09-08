@@ -64,6 +64,10 @@ function App() {
       <p>
         <button onClick={onRefresh}>⏭️</button>
       </p>
+      <p>
+        Gostou do app? Não esqueça que ele é só uma conveniência.<br />
+        Suporte os criadores e editoras comprando o jogo físico!
+      </p>
     </div>
   );
 }
