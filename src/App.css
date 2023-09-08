@@ -6,3 +6,5 @@ td { padding:8px; border-top: 1px solid #ccc; }
 td.category { font-weight:bold; text-align:center; width:20%; }
 td.score { text-align:center; width:20%; }
 td.card-info { text-align:center; }
+p { text-align: center; }
+button { border:0; background-color:white; font-size:24px; }

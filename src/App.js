@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 import cards from "./cards.json";
 
@@ -50,10 +51,19 @@ const Card = ({ contents }) => {
 }
 
 function App() {
+  const [currentCard, setCurrentCard] = useState(cards.random());
+
+  const onRefresh = () => {
+    setCurrentCard(cards.random());
+  }
+
   return (
     <div className="App">
       <h1>Ação de Bolso</h1>
-      <Card contents={cards.random()} />
+      <Card contents={currentCard} />
+      <p>
+        <button onClick={onRefresh}>⏭️</button>
+      </p>
     </div>
   );
 }
