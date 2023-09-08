@@ -2,8 +2,8 @@ import { useState } from 'react';
 import './App.css';
 import cards from "./cards.json";
 
-Array.prototype.random = function () {
-  return this[Math.floor((Math.random() * this.length))];
+const sampleFrom = (list) => {
+  return list[Math.floor((Math.random() * list.length))];
 }
 
 const Card = ({ contents }) => {
@@ -51,10 +51,10 @@ const Card = ({ contents }) => {
 }
 
 function App() {
-  const [currentCard, setCurrentCard] = useState(cards.random());
+  const [currentCard, setCurrentCard] = useState(sampleFrom(cards));
 
   const onRefresh = () => {
-    setCurrentCard(cards.random());
+    setCurrentCard(sampleFrom(cards));
   }
 
   return (
