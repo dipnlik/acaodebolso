@@ -62,10 +62,10 @@ function App() {
       <h1>Ação de Bolso</h1>
       <Card contents={currentCard} />
       <p>
-        <button onClick={onRefresh}>⏭️</button>
+        <button onClick={onRefresh}>🔀</button>
       </p>
       <p>
-        Gostou do app? Não esqueça que ele é só uma conveniência.<br />
+        Gostou do app? Não esqueça que ele é só uma conveniência.
         Suporte os criadores e editoras comprando o jogo físico!
       </p>
     </div>
