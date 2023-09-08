@@ -18,7 +18,6 @@ function App() {
     if (!navigator.canShare) return;
 
     navigator.share({
-      title: 'Ação de Bolso',
       url: 'https://dipnlik.github.io/acaodebolso/',
     });
   }
@@ -29,7 +28,7 @@ function App() {
       <Card contents={currentCard} />
       <p>
         <button onClick={onRefresh}>🔀</button>
-        {navigator.share && (
+        {navigator.canShare && (
           <button onClick={handleShare}>↗️</button>
         )}
       </p>
