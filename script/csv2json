@@ -1,12 +1,22 @@
 #!/usr/bin/env ruby
+# Converts a CSV file into JSON, adding the gid key to all entries.
 
-require 'csv'
-require 'json'
+require "csv"
+require "json"
 
-file1 = CSV.read('1.csv', headers: true)
-file2 = CSV.read('2.csv', headers: true)
+unless ARGV.size >= 2
+  puts "Usage: #{__FILE__} csvfile gameid"
+  exit 1
+end
 
-list1 = file1.map{ |line| item = line.to_h ; item[:gid] = 1 ; item }
-list2 = file2.map{ |line| item = line.to_h ; item[:gid] = 2 ; item }
+input_path, gid = ARGV
+output_path = input_path.sub(/\.csv$/, ".json")
 
-File.write('cards.json', (list1 + list2).to_json)
+file = CSV.read(input_path, headers: true)
+list = file.map do |line|
+  item = line.to_h
+  item[:gid] = gid
+  item
+end
+
+File.write(output_path, list.to_json)
