@@ -1,5 +1,5 @@
 const Card = ({ contents }) => {
-  const { id, gid, ...entries } = contents;
+  const { id, gid, cat, ...entries } = contents;
 
   return (
     <table className="table table-striped">
@@ -24,7 +24,11 @@ const Card = ({ contents }) => {
       </tbody>
       <tfoot>
         <tr>
-          <td className="card-info" colSpan="3">#{id}-{gid}</td>
+          <td className="card-info" colSpan="3">
+            {id && `#${id}-`}
+            {cat && `${cat}-`}
+            {gid}
+          </td>
         </tr>
       </tfoot>
     </table>

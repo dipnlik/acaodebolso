@@ -1,6 +1,6 @@
 body { font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; }
 h1 { text-align:center; font-weight:normal; }
-table { width:100%; border-spacing:0; }
+table { width:100%; border-spacing:0; min-height:250px; }
 .table-striped tr:nth-of-type(even) { background-color:#eee; }
 td { padding:8px; border-top: 1px solid #ccc; }
 td.category { font-weight:bold; text-align:center; width:20%; }
