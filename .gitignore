@@ -26,4 +26,4 @@ yarn-error.log*
 script/*.csv
 script/*.json
 src/cards.json
-src/cards/*.json
+src/api/*

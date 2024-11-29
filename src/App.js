@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import cards from "./cards.json";
+import cards from './api/cards';
 import Card from './components/Card';
 
 const sampleFrom = (list) => {

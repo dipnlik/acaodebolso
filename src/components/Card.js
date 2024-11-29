@@ -4,7 +4,7 @@ const Card = ({ contents }) => {
   return (
     <table className="table table-striped">
       <tbody>
-        {[1, 2].includes(gid) && ["P", "O", "A", "D", "L", "M"].map((category, index) => {
+        {[1, 2, "1", "2"].includes(gid) && ["P", "O", "A", "D", "L", "M"].map((category, index) => {
           return (
             <tr key={index}>
               <td className="category">{category}</td>
